@@ -1,5 +1,6 @@
 import { BRAND_CONFIGS } from "@repo/config/brands"
 import { API_ROUTES } from "@repo/constants/api"
+import { isValidEmail } from "@repo/helpers/validation"
 
 export default function Page() {
   const casino = "CasinoA"
@@ -8,6 +9,7 @@ export default function Page() {
     <main className="flex flex-col items-center justify-between min-h-screen p-24">
         <div>{config.name}</div>
         <div>{API_ROUTES.GAMES}</div>
+        <div>{`${isValidEmail('akinremiolumide96@gmail.com')}`}</div>
     </main>
   );
 }
