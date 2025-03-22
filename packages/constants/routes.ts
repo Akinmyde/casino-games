@@ -7,6 +7,6 @@ export const API_ROUTES = {
 export const CLIENT_ROUTES = {
     MARKET: '/market',
     LOGIN: '/market/login',
-    CASINO: '/casino',
+    CASINO: '/market/casino',
     PROFILE: '/my-profile'
 }

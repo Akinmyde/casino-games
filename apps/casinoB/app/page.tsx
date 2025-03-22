@@ -20,7 +20,7 @@ export default function Page() {
           className="w-full sm:w-auto px-6 py-3 text-lg font-bold rounded-lg bg-blue-500 hover:bg-blue-600 transition focus:ring-4 focus:ring-blue-300"
         >
           English Market 🇬🇧
-        </button>
+        </button> 
         <button
           onClick={() => router.push(`/ca/${CLIENT_ROUTES.MARKET}`)}
           className="w-full sm:w-auto px-6 py-3 text-lg font-bold rounded-lg bg-red-500 hover:bg-red-600 transition focus:ring-4 focus:ring-red-300"
