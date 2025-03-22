@@ -8,9 +8,9 @@
       "build": "tsc"
     },
     "exports": {
-      "./api": {
-        "types": "./api.ts",
-        "default": "./dist/api.js"
+      "./routes": {
+        "types": "./routes.ts",
+        "default": "./dist/routes.js"
       },
       "./market": {
         "types": "./market.ts",

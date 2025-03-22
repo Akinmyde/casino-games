@@ -11,6 +11,10 @@
       "./validation": {
         "types": "./validation.ts",
         "default": "./dist/validation.js"
+      },
+      "./checkMarket": {
+        "types": "./checkMarket.ts",
+        "default": "./dist/checkMarket.js"
       }
     },
     "devDependencies": {
