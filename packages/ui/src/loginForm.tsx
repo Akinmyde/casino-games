@@ -1,35 +1,45 @@
 'use client'
 
 import { useState } from "react";
-import { signIn } from "next-auth/react";
+import { User } from '@repo/types/user'
 import { useRouter } from "next/navigation";
+import { CLIENT_ROUTES } from "@repo/constants/routes";
 
 export const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   const router = useRouter();
 
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     try {
-      const response = await signIn("credentials", {
-        username,
-        password,
-        redirect: false,
-      });
-      if (!!response?.error) {
-        console.log("error");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/login`, {
+        method: 'POST',
+        body: JSON.stringify({ username, password }),
+      headers: { "Content-Type": "application/json" },
+      })
+      const data = await res.json();
+      console.log(data);
+      
+      if(!res.ok) {
+        setError(data.error || "Login failed");
       } else {
-        router.push("/ca/market/casino");
+        localStorage.setItem("token", data.token);
+    localStorage.setItem("user", JSON.stringify(data.user));
+    const user = data?.user as User
+    router.push(`/${user.country}/${CLIENT_ROUTES.CASINO}`);
       }
     } catch (error) {
       console.log(error, "error");
     }
   }
+
   return (
     <div className="p-6 bg-gray-800 rounded-lg shadow-lg w-96">
       <h1 className="text-2xl font-bold mb-4">Login</h1>
+      {error && <p className="text-red-400">{error}</p>}
       <form onSubmit={handleLogin} className="flex flex-col space-y-4">
         <input
           type="text"

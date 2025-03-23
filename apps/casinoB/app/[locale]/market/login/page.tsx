@@ -6,6 +6,7 @@ import { CLIENT_ROUTES } from "@repo/constants/routes";
 
 export default async function LoginPage({ params }: { params: { locale: string } }) {
     const session = await getServerSession()
+    
     if(session) {
         redirect(`/${params.locale}/${CLIENT_ROUTES.CASINO}`)
     }

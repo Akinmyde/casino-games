@@ -1,5 +1,5 @@
 {
-  "name": "with-tailwind",
+  "name": "casino-games",
   "private": true,
   "scripts": {
     "build": "turbo run build",
@@ -20,5 +20,9 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@tanstack/react-query": "^5.69.0",
+    "@tanstack/react-query-devtools": "^5.69.0"
+  }
 }
