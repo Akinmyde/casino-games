@@ -1,3 +1,4 @@
+import Menu from "@repo/ui/menu";
 import "./globals.css";
 import "@repo/ui/styles.css";
 import type { Metadata } from "next";
@@ -17,6 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Menu locale="en" />
       <body className={inter.className}>{children}</body>
     </html>
   );

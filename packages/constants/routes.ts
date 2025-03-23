@@ -8,5 +8,5 @@ export const CLIENT_ROUTES = {
     MARKET: '/market',
     LOGIN: '/market/login',
     CASINO: '/market/casino',
-    PROFILE: '/my-profile'
+    PROFILE: 'market/my-profile'
 }

@@ -1,8 +1,9 @@
+import { CLIENT_ROUTES } from '@repo/constants/routes'
 export const CasinoBConfig = {
     name: "Casino B",
     menuPosition: "top",
     theme: "light",
-    logo: "/casinoB-logo.png",
+    logo: "https://casinodays2.imgix.net/games/bonanza-relax.jpg",
     translation: {
         en: {
             common: {
@@ -23,4 +24,9 @@ export const CasinoBConfig = {
         primary: "#4CAF50",
         secondary: "#FF9800",
     },
+    menu: [
+        { label: "Market", path: `${CLIENT_ROUTES.MARKET}` },
+        { label: "Games", path: `${CLIENT_ROUTES.CASINO}` },
+        { label: "Account", path: `${CLIENT_ROUTES.PROFILE}` },
+    ],
 };
