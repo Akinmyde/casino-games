@@ -1,0 +1,19 @@
+[
+    {
+      "id": 1,
+      "username": "player1",
+      "name": "john",
+      "surname": "doe",
+      "password": "player1",
+      "country": "en"
+    },
+    {
+      "id": 2,
+      "name": "jane",
+      "surname": "doe",
+      "username": "player2",
+      "password": "player1",
+      "country": "fr"
+    }
+  ]
+  

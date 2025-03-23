@@ -4,4 +4,5 @@ export interface User {
     country: "en" | "ca";
     name?: string;
     surname?: string;
+    password: string;
 }

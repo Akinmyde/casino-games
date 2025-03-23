@@ -1,7 +1,5 @@
 import { Game } from "@repo/types/game";
 import GameCard from "@repo/ui/gameCard";
-import Image from "next/image";
-import Link from "next/link";
 
 const Casino = async () => {
   const data = await fetch(
