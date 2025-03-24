@@ -1,4 +1,4 @@
-import { ChangeEvent, InputHTMLAttributes } from "react"
+import { ChangeEvent } from "react"
 
 interface Props {
     type: "text" | "password"
@@ -14,7 +14,7 @@ export const Input = (props: Props) => {
         placeholder={props.placeholder}
         value={props.value}
         onChange={props.onChange}
-        className="p-3 bg-gray-700 rounded"
+        className="p-3 bg-gray-700 rounded w-[100%]"
         required={props.required}
       />
     )

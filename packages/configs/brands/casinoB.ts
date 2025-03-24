@@ -21,7 +21,7 @@ export const CasinoBConfig = {
         },
     },
     colors: {
-        primary: "#4CAF50",
+        primary: "purple",
         secondary: "#FF9800",
     },
     menu: [

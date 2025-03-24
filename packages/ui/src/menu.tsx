@@ -12,7 +12,7 @@ const config = BRAND_CONFIGS['CasinoB']
   return (
     <nav className={`w-full bg-gray-900 text-white shadow-lg ${config.menuPosition === "top" ? "fixed top-0" : "fixed left-0 h-full w-56"} z-50`}>
       <div className="flex items-center justify-center p-4 border-b border-gray-700">
-        <Image src={config.logo} alt="Casino Logo" width={50} height={50} className="ui-rounded-full" />
+        <Image src={config.logo} alt="Casino Logo" width={12} height={12} className="w-12 h-12 ui-rounded-full" />
       </div>
 
       <ul className={`flex ${config.menuPosition === "top" ? "flex-row justify-center space-x-6 p-4" : "flex-col p-4 space-y-4"}`}>

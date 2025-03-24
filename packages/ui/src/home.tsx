@@ -1,6 +1,6 @@
 import { BRAND_CONFIGS } from "@repo/config/brands";
 import { SUPPORTED_MARKETS } from "@repo/constants/market";
-import Image from "next/image";
+import { CLIENT_ROUTES } from "@repo/constants/routes";
 
 const CasinoLanding = async ({ locale }: { locale: string }) => {
     const casino = "CasinoB";
@@ -16,10 +16,12 @@ const CasinoLanding = async ({ locale }: { locale: string }) => {
 
       <h1 className="text-4xl font-extrabold text-white mb-4">{t.common.welcome}</h1>
       <p className="text-lg text-white mb-6">{t.common.casino_intro}</p>
+      <p>You can change things like the theme (color), menu position and text in your config </p>
 
       {/* Navigation Buttons */}
+
       <div className="flex space-x-4">
-        <a href={`/${locale}/market/login`} className="px-6 py-3 bg-black text-white rounded-lg font-bold hover:bg-gray-700">
+        <a href={`/${locale}${CLIENT_ROUTES.LOGIN}`} className="px-6 py-3 bg-black text-white rounded-lg font-bold hover:bg-gray-700">
           {t.common.login}
         </a>
       </div>

@@ -4,8 +4,7 @@ import { Game } from "@repo/types/game"
 import { Button } from "./button";
 
 const GameCard = ({ game }: { game: Game }) => (
-  // <Link href={`casino/${game.slug}`} className="group">
-  <Link href={'#'} className="group">
+  <Link href={`casino/${game.slug}`} className="group">
     <div className="border rounded-lg p-3 bg-gray-800 hover:scale-105 transition">
       <Image
         height={200}

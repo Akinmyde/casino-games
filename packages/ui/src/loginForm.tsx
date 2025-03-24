@@ -29,10 +29,11 @@ export const LoginForm = () => {
       if(!res.ok) {
         setError(data.error || "Login failed");
       } else {
-        setCookie('token', data?.token)
-        setCookie('user', JSON.stringify(data.user))
-    const user = data?.user as User
-    router.push(`/${user.country}/${CLIENT_ROUTES.CASINO}`);
+        // Store in localstorage for now.
+        setCookie("token", data.token);
+        setCookie("user", JSON.stringify(data.user));
+        const user = data?.user as User
+        router.push(`/${user.country}/${CLIENT_ROUTES.CASINO}`);
       }
     } catch (error) {
       console.log(error, "error");
@@ -52,7 +53,7 @@ export const LoginForm = () => {
         required
         />
         <Input
-          type="text"
+          type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -63,3 +64,4 @@ export const LoginForm = () => {
     </div>
   );
 };
+
