@@ -23,6 +23,7 @@
   ],
   "dependencies": {
     "@tanstack/react-query": "^5.69.0",
-    "@tanstack/react-query-devtools": "^5.69.0"
+    "@tanstack/react-query-devtools": "^5.69.0",
+    "cookies-next": "^5.1.0"
   }
 }

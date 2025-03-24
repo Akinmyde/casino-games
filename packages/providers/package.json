@@ -1,0 +1,17 @@
+{
+    "name": "@repo/providers",
+    "type": "module",
+    "private":"true",
+    "files": ["dist"],
+    "scripts": {
+      "dev": "tsc --watch",
+      "build": "tsc"
+    },
+    "exports": {
+      "./query/*": "./src/query/*.ts"
+    },
+    "devDependencies": {
+      "@repo/typescript-config": "*",
+      "typescript": "5.8.2"
+    }
+}

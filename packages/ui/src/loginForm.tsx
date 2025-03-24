@@ -4,6 +4,9 @@ import { useState } from "react";
 import { User } from '@repo/types/user'
 import { useRouter } from "next/navigation";
 import { CLIENT_ROUTES } from "@repo/constants/routes";
+import { Button } from "./button";
+import { Input } from "./input";
+import { setCookie } from "cookies-next";
 
 export const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -26,8 +29,8 @@ export const LoginForm = () => {
       if(!res.ok) {
         setError(data.error || "Login failed");
       } else {
-        localStorage.setItem("token", data.token);
-    localStorage.setItem("user", JSON.stringify(data.user));
+        setCookie('token', data?.token)
+        setCookie('user', JSON.stringify(data.user))
     const user = data?.user as User
     router.push(`/${user.country}/${CLIENT_ROUTES.CASINO}`);
       }
@@ -41,28 +44,21 @@ export const LoginForm = () => {
       <h1 className="text-2xl font-bold mb-4">Login</h1>
       {error && <p className="text-red-400">{error}</p>}
       <form onSubmit={handleLogin} className="flex flex-col space-y-4">
-        <input
-          type="text"
-          placeholder="Username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          className="p-3 bg-gray-700 rounded"
-          required
+        <Input 
+        type="text"
+        placeholder="Username"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+        required
         />
-        <input
-          type="password"
+        <Input
+          type="text"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="p-3 bg-gray-700 rounded"
           required
         />
-        <button
-          type="submit"
-          className="p-3 bg-blue-500 rounded hover:bg-blue-600"
-        >
-          Login
-        </button>
+        <Button text="Login" />
       </form>
     </div>
   );
