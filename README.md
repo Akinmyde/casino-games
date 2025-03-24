@@ -1,58 +1,81 @@
-# Turborepo Tailwind CSS starter
+# 🎰 Next.js Casino Portal  
 
-This Turborepo starter is maintained by the Turborepo core team.
+## 🚀 Overview  
+The **Next.js Casino Portal** is a **scalable, modular web application** built using **Next.js, TypeScript, and Turborepo**.
+  
+It features a **multi-theme system**, **localized markets**, **authentication**, **a game catalog**, and **API routes**.  
 
-## Using this example
+## ✨ Features  
 
-Run the following command:
+- **Next App Router** – Optimized for performance with Server Components. 
 
-```sh
-npx create-turbo@latest -e with-tailwind
+- **Monorepo Architecture** – Managed with **Turborepo** for modular development.  
+
+- **Multi-Theme Support** – Dynamic **brand-based theming** with Tailwind CSS & Config.  
+
+- **Localization** – Market-specific content for `/en` and `/ca`.
+
+- **Authentication & Authorization** – Secure **based login** with cookie handling.  
+
+- **Game Catalog** – Browse, search, and access game details (`/casino/{slug}`). 
+
+- **API Routes** – RESTful API for fetching game data (`/api/games/{slug}`).  
+ 
+- **Testing with Vitest** – **Unit & integration tests** for APIs and UI components.  
+
+## Tech Stack
+
+- React/Nextjs: Frontend library for building user interfaces.
+
+- React-Query: Data fetching and managing state.
+
+- Tailwind: For styling and style config
+
+## 🛠️ Setup & Installation  
+
+## **1️⃣ Prerequisites**  
+- Node.js **>=18**  
+- **pnpm** (Preferred package manager)  
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`NEXT_PUBLIC_BRAND`
+
+`NEXT_PUBLIC_API_BASE_URL`
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Akinmyde/casino-games.git
 ```
 
-## What's inside?
+Go to the project directory
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `web`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `ui`: a stub React component library with [Tailwind CSS](https://tailwindcss.com/) shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Building packages/ui
-
-This example is set up to produce compiled styles for `ui` components into the `dist` directory. The component `.tsx` files are consumed by the Next.js apps directly using `transpilePackages` in `next.config.ts`. This was chosen for several reasons:
-
-- Make sharing one `tailwind.config.ts` to apps and packages as easy as possible.
-- Make package compilation simple by only depending on the Next.js Compiler and `tailwindcss`.
-- Ensure Tailwind classes do not overwrite each other. The `ui` package uses a `ui-` prefix for it's classes.
-- Maintain clear package export boundaries.
-
-Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update the `tailwind.config.ts` in your apps to be aware of your package locations, so it can find all usages of the `tailwindcss` class names for CSS compilation.
-
-For example, in [tailwind.config.ts](packages/tailwind-config/tailwind.config.ts):
-
-```js
-  content: [
-    // app content
-    `src/**/*.{js,ts,jsx,tsx}`,
-    // include packages if not transpiling
-    "../../packages/ui/*.{js,ts,jsx,tsx}",
-  ],
+```bash
+  cd casino-games
 ```
 
-If you choose this strategy, you can remove the `tailwindcss` and `autoprefixer` dependencies from the `ui` package.
+Install dependencies
 
-### Utilities
+```bash
+  npm install
+```
 
-This Turborepo has some additional tools already setup for you:
+Install dependencies
 
-- [Tailwind CSS](https://tailwindcss.com/) for styles
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+```bash
+  npm run dev
+```
+
+## Screenshots
+
+![App Screenshot](https://res.cloudinary.com/codeace/image/upload/v1742818915/Screenshot_2025-03-24_at_13.21.47_dinvrz.jpg)
+
+
+## Authors
+
+- [@akinmyde](https://www.github.com/akinmyde)

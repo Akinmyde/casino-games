@@ -5,7 +5,8 @@ import GameCard from "@repo/ui/gameCard";
 import { useGetGames } from "@repo/providers/query/queries/casinos";
 
 const Casino = () => { 
-  const { data: games, isLoading } = useGetGames()
+  // Todo: Implement pagination
+  const { data: games, isLoading } = useGetGames(1, 1000)
 
   
   if(isLoading) {
@@ -21,6 +22,7 @@ const Casino = () => {
           <GameCard key={game.id} game={game} />
         ))}
       </div>
+      {/* Implement Pagination */}
     </div>
   );
 };
