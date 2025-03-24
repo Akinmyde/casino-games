@@ -3,6 +3,16 @@
   "ui": "tui",
   "globalEnv": ["NEXT_PUBLIC_API_BASE_URL"],
   "tasks": {
+    "test": {
+      "dependsOn": ["transit"]
+    },
+    "test:watch": {
+      "cache": false,
+      "persistent": true
+    },
+    "transit": {
+      "dependsOn": ["^transit"]
+    },
     "build": {
       "env": ["NEXT_PUBLIC_API_BASE_URL"],
       "dependsOn": ["^build"],

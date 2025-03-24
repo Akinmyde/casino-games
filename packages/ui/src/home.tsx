@@ -16,7 +16,7 @@ const CasinoLanding = async ({ locale }: { locale: string }) => {
 
       <h1 className="text-4xl font-extrabold text-white mb-4">{t.common.welcome}</h1>
       <p className="text-lg text-white mb-6">{t.common.casino_intro}</p>
-      <p>You can change things like the theme (color), menu position and text in your config </p>
+      <p>You can set things like the theme (color), menu position and text in your config </p>
 
       {/* Navigation Buttons */}
 

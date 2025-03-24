@@ -9,9 +9,18 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^26.0.0",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "turbo": "^2.4.4"
+    "supertest": "^7.1.0",
+    "turbo": "^2.4.4",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.0.9"
   },
   "engines": {
     "node": ">=18"
@@ -24,6 +33,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.69.0",
     "@tanstack/react-query-devtools": "^5.69.0",
-    "cookies-next": "^5.1.0"
+    "cookies-next": "^5.1.0",
+    "D": "^1.0.0"
   }
 }
